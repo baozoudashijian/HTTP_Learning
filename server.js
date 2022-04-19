@@ -94,6 +94,8 @@ const htmlStrCombine = `<!DOCTYPE html>
 </html>`
 
 app.get('/index5.html', (req, res) => {
+  console.log(req.url) // 带路径的查询字符串
+  console.log(req.query) // 不带路径的查询字符串
   res.type('.html')
   res.send(htmlStrCombine)
 })
